@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:screenOrientation="portrait"
+    tools:context="fi.minscie.duckt.smartshovel.Main2Activity">
+
+    <TextView
+        android:text="Current Temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView6" />
+
+
+    <Button
+        android:text="Start"
+        android:onClick="startButtonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startTracking"
+        android:padding="30dp"
+        android:layout_above="@+id/restartTracking"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="gravity"
+        android:layout_toLeftOf="@+id/restartTracking"
+        android:layout_toStartOf="@+id/restartTracking" />
+
+    <Button
+        android:text="Restart"
+        android:onClick="restartButtonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/restartTracking"
+        android:padding="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Aver. Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/averageWeightTextView"
+        android:layout_alignBaseline="@+id/weightTextView"
+        android:layout_alignBottom="@+id/weightTextView"
+        android:layout_alignLeft="@+id/averageWeightValueTextView"
+        android:layout_alignStart="@+id/averageWeightValueTextView" />
+
+
+    <TextView
+        android:text="Last Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lastWeightTextView"
+        android:layout_alignBaseline="@+id/averageWeightTextView"
+        android:layout_alignBottom="@+id/averageWeightTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/lastWeightValueTextView"
+        android:textSize="40dp"
+        android:textAlignment="gravity"
+        android:layout_below="@+id/lastWeightTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Total Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weightTextView"
+        android:layout_above="@+id/weightValueTextView"
+        android:layout_alignLeft="@+id/weightValueTextView"
+        android:layout_alignStart="@+id/weightValueTextView" />
+
+    <Button
+        android:text="Stop"
+        android:onClick="stopButtonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stopTracking"
+        android:padding="30dp"
+        android:layout_above="@+id/restartTracking"
+        android:layout_toRightOf="@+id/restartTracking"
+        android:layout_toEndOf="@+id/restartTracking" />
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:id="@+id/textView2"
+        android:scrollbars = "vertical"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:layout_above="@+id/shovelledTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/averageWeightValueTextView"
+        android:textSize="40dp"
+        android:textAlignment="gravity"
+        android:layout_below="@+id/averageWeightTextView"
+        android:layout_toRightOf="@+id/startTracking"
+        android:layout_toEndOf="@+id/startTracking" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:id="@+id/weightValueTextView"
+        android:textSize="40dp"
+        android:textAlignment="gravity"
+        android:layout_marginBottom="42dp"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="NA"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:id="@+id/temperatureValueTextView"
+        android:textSize="40dp"
+        android:textAlignment="gravity"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="°C"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:textSize="40dp"
+        android:id="@+id/textView4"
+        android:textAlignment="gravity"
+        android:layout_below="@+id/textView6"
+        android:layout_toRightOf="@+id/temperatureValueTextView"
+        android:layout_toEndOf="@+id/temperatureValueTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/countValueTextView"
+        android:textSize="40dp"
+        android:textAlignment="gravity"
+        android:layout_height="55dp"
+        android:layout_above="@+id/restartTracking"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Shovelled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shovelledTextView"
+        android:layout_alignTop="@+id/startTracking"
+        android:layout_alignRight="@+id/averageWeightTextView"
+        android:layout_alignEnd="@+id/averageWeightTextView" />
+
+    <Button
+        android:text="History"
+        android:onClick="historyButtonClicked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/historyButton"
+        android:padding="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/stopTracking"
+        android:layout_alignEnd="@+id/stopTracking" />
+
+    <TextView
+        android:text="Aver. Temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/weightTextView"
+        android:layout_alignEnd="@+id/weightTextView" />
+
+    <TextView
+        android:text="NA"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:id="@+id/averageTemperatureTextView"
+        android:textSize="40dp"
+        android:textAlignment="gravity"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:text="°C"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:textSize="40dp"
+        android:id="@+id/textView"
+        android:textAlignment="gravity"
+        android:layout_below="@+id/textView3"
+        android:layout_toRightOf="@+id/averageTemperatureTextView"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+</RelativeLayout>
